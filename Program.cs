@@ -6,6 +6,17 @@ public static partial class Program
 {
     [GeneratedRegex("^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])\\d{7}$")]
     private static partial Regex FnumRegex();
+    
+    // Check if date is valid
+    private static bool CheckDate(IReadOnlyList<ushort> fnumList)
+    {
+        var date = "";
+        for (ushort i = 0; i < 6; i++)
+        {
+            date += fnumList[i];
+        }
+        return DateTime.TryParseExact(date, "ddMMyy", null, System.Globalization.DateTimeStyles.None, out _);
+    }
 
     // Check if a Fnum is valid    
     private static bool CheckFnumValid(IReadOnlyList<ushort> fnumList)
@@ -25,7 +36,7 @@ public static partial class Program
         }
 
         var regexOk = FnumRegex().IsMatch(fnum);
-        return regexOk && CleanDivide(checksum1, 11) && CleanDivide(checksum2, 11);
+        return regexOk && CheckDate(fnumList) && CleanDivide(checksum1, 11) && CleanDivide(checksum2, 11);
     }
 
     // Checks if there's an clean divide between two numbers.
