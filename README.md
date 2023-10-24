@@ -1,6 +1,8 @@
 # generateNationaIDs
 > C# CLI program for generating numbers.
 
+[![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/license/mit/)
+
 The program outputs all valid social security numbers for Norway.
 
 ## Start the program
