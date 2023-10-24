@@ -6,7 +6,10 @@
 The program outputs all valid social security numbers for Norway.
 
 ## Start the program
-Start the program by running `dotnet run` command.
+Start the program by running:
+```sh
+dotnet run
+```
 
 You should start seeing numbers appearing in the console so you know that the program is running.
 
