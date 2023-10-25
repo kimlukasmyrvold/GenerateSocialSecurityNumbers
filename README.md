@@ -1,4 +1,4 @@
-# generateNationaIDs
+# Generate Social Security Numbers
 > C# CLI program for generating numbers.
 
 [![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/license/mit/)
